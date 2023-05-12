@@ -111,15 +111,15 @@ geometria.setIndex(new THREE.BufferAttribute(indicesArray, 1));
 geometria.computeVertexNormals();
 
 // Crear el material y el objeto de malla
-var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+var material = new THREE.MeshBasicMaterial({ color: 0x000000,wireframe:true});
 var poliedro = new THREE.Mesh(geometria, material);
 
 // Devolver el poliedro
 return poliedro;
-      }
+}
     }
 
-    var poliedro = construirPoliedro(6, 1, 2);
+    var poliedro = construirPoliedro(8, 5, 10);
     scene.add(poliedro);
 
     const controls = new OrbitControls(camera, renderer.domElement);
